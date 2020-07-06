@@ -1,0 +1,14 @@
+$table->string('ssc_passing_year');
+$table->string('ssc_board');
+$table->string('ssc_roll');
+$table->string('ssc_registration');
+$table->string('ssc_trade');
+$table->string('ssc_math_gpa');
+$table->string('ssc_gpa');
+$table->string('hsc_passing_year');
+$table->string('hsc_board');
+$table->string('hsc_roll');
+$table->string('hsc_registration');
+$table->string('hsc_trade');
+$table->string('hsc_math_gpa');
+$table->string('hsc_gpa');
