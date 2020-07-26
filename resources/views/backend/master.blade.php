@@ -5,6 +5,8 @@
     <title>LMS | Home</title>
     <meta name="description" content="">
     <meta name="viewport" content="width=device-width, initial-scale=1">
+    <!-- CSRF Token -->
+    <meta name="csrf-token" content="{{ csrf_token() }}">
     <!-- Favicon -->
     <link rel="shortcut icon" type="image/x-icon" href="{{asset('public/assets/backend')}}/img/favicon.png">
     <!-- Normalize CSS -->
@@ -93,8 +95,12 @@
     <script type="text/JavaScript" src="{{asset('public/assets/backend')}}/js/toastr.min.js" ></script>
     {{-- Handlebars js --}}
     <script type="text/JavaScript" src="{{asset('public/assets/backend')}}/js/handlebars.min.js" ></script>
+   
+    
     {{-- Page script --}}
     @yield('script')
+
+
     <!-- Custom Js -->
     <script src="{{asset('public/assets/backend')}}/js/main.js"></script>
     
@@ -109,21 +115,7 @@
         }
     }
 </script>
-<!--code for show image when select-->
-<script type="text/javascript">
-function readURL(input) {
-    if (input.files && input.files[0]) {
-    var reader = new FileReader();
-    reader.onload = function(e) {
-        $('#blah').attr('src', e.target.result);
-    }
-    reader.readAsDataURL(input.files[0]); // convert to base64 string
-    }
-}
-$("#imgInp").change(function() {
-    readURL(this);
-});
-</script>
+
 
 {{-- code for Toster --}}
 <script type="text/javascript">

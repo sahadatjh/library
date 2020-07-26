@@ -11,7 +11,7 @@
     </ul>
 </div>
 <!-- Breadcubs Area End Here -->
-<!-- Account Settings Area Start Here -->
+<!-- Purchase Area Start Here -->
 <div class="row">
     <div class="col-12">
         <div class="card">
@@ -74,26 +74,6 @@
                             @endforeach
                         </select>
                     </div>
-                    {{-- <div class="col-lg-2 col-12 form-group">
-                        <label for="quantity">Quantity *</label>
-                        <input id="quantity" type="number" name="quantity" class="form-control @error('quantity') is-invalid @enderror"  value="{{ old('quantity') }}"placeholder="Ex. 30"  autocomplete="quantity" >
-                    </div>
-                    <div class="col-lg-2 col-12 form-group">
-                        <label for="priented_price">Price(Priented)</label>
-                        <input id="priented_price" type="number" name="priented_price" class="form-control @error('priented_price') is-invalid @enderror"  value="{{ old('priented_price') }}"placeholder="Ex. 220"  autocomplete="priented_price" >
-                    </div>
-                    <div class="col-lg-2 col-12 form-group">
-                        <label for="discount">Discount %</label>
-                        <input id="discount" type="number" name="discount" class="form-control @error('discount') is-invalid @enderror"  value="{{ old('discount') }}"placeholder="Ex. 25"  autocomplete="discount" > 
-                    </div>
-                    <div class="col-lg-2 col-12 form-group">
-                        <label for="toral_price">Total Price</label>
-                        <input id="toral_price" type="number" name="total_payable" class="form-control @error('toral_price') is-invalid @enderror"  value="{{ old('toral_price') }}"placeholder="Ex. 4950"  autocomplete="toral_price" > 
-                    </div>
-                    <div class="col-lg-6 col-12 form-group">
-                        <label for="remarks">Remarks *</label>
-                        <textarea id="remarks" name="remarks" class="textarea form-control @error('remarks') is-invalid @enderror" cols="10" rows="4"></textarea>
-                    </div> --}}
                     <div class="col-3 form-group mg-t-8">
                         <button class="btn-fill-lg bg-blue-dark btn-hover-yellow btnAdd" id="btnAdd" style="margin-top: 30px">Add Item</button>
                     </div>
@@ -144,7 +124,7 @@
                 <input type="hidden" name="book_id[]" value="@{{book_id}}">@{{book_name}}
             </td>
             <td><div class="form-group"><input type="number" class="form-control quantity" name="quantity[]" value="1" min="1" size="2"></div></td>
-            <td><div class="form-group"><input type="number" class="form-control unit_price" name="unit_price[]"></div></td>
+            <td><div class="form-group"><input type="number" class="form-control unit_price" name="unit_price[]" id="unit_price"></div></td>
             <td><div class="form-group"><input type="number" class="form-control discount" name="discount[]"></div></td>
             <td><div class="form-group"><input type="text" class="form-control " name="remarks[]"></div></td>
             <td><div class="form-group"><input type="number" class="form-control total_price" name="total_price[]" value="0" readonly></div></td>
@@ -221,6 +201,18 @@
                 });
                 $('.total_payable_amount').val(sum);
             }
+        });
+
+        $(document).ready(function(){
+            $(document).on("click","#btnStore",function(){
+                
+                var unit_price = $('#unit_price').val();
+
+                if (unit_price=='') {
+                    toastr.error("Unite Price required!!!");
+                    return false;
+                }
+            });
         });
     </script>
 @endsection

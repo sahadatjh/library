@@ -27,46 +27,43 @@
                 </ul>
             </li>
             <li class="nav-item sidebar-nav-item">
-                <a href="#" class="nav-link"><i class="flaticon-menu-1"></i><span>Cariculam</span></a>
-                <ul class="nav sub-group-menu {{($prefix=='/cariculam')?'sub-group-active':''}}">
+                <a href="#" class="nav-link"><i class="flaticon-settings"></i><span>Initial Settings</span></a>
+                <ul class="nav sub-group-menu {{($prefix=='/settings')?'sub-group-active':''}}">
                     <li class="nav-item">
                         <a href="{{route('cariculam.index')}}" class="nav-link {{($route=='cariculam.index')?'menu-active':''}}"><i class="fas fa-angle-right"></i>All Cariculam</a>
                     </li>
                     <li class="nav-item">
                         <a href="{{route('cariculam.create')}}" class="nav-link {{($route=='cariculam.create')?'menu-active':''}}"><i class="fas fa-angle-right"></i>Add New Cariculam</a>
                     </li>
-                </ul>
-            </li>
-            <li class="nav-item sidebar-nav-item">
-                <a href="#" class="nav-link"><i class="flaticon-menu-1"></i><span>Department</span></a>
-                <ul class="nav sub-group-menu {{($prefix=='/department')?'sub-group-active':''}}">
                     <li class="nav-item">
                         <a href="{{route('department.index')}}" class="nav-link {{($route=='department.index')?'menu-active':''}}"><i class="fas fa-angle-right"></i>All department</a>
                     </li>
                     <li class="nav-item">
                         <a href="{{route('department.create')}}" class="nav-link {{($route=='department.create')?'menu-active':''}}"><i class="fas fa-angle-right"></i>Add New Department</a>
                     </li>
-                </ul>
-            </li>
-            <li class="nav-item sidebar-nav-item">
-                <a href="#" class="nav-link"><i class="flaticon-menu-1"></i><span>Semester</span></a>
-                <ul class="nav sub-group-menu {{($prefix=='/semester')?'sub-group-active':''}}">
                     <li class="nav-item">
                         <a href="{{route('semester.index')}}" class="nav-link {{($route=='semester.index')?'menu-active':''}}"><i class="fas fa-angle-right"></i>All semester</a>
                     </li>
                     <li class="nav-item">
                         <a href="{{route('semester.create')}}" class="nav-link {{($route=='semester.create')?'menu-active':''}}"><i class="fas fa-angle-right"></i>Add New Semester</a>
                     </li>
-                </ul>
-            </li>
-            <li class="nav-item sidebar-nav-item">
-                <a href="#" class="nav-link"><i class="flaticon-menu-1"></i><span>Session</span></a>
-                <ul class="nav sub-group-menu {{($prefix=='/session')?'sub-group-active':''}}">
                     <li class="nav-item">
                         <a href="{{route('session.index')}}" class="nav-link {{($route=='session.index')?'menu-active':''}}"><i class="fas fa-angle-right"></i>All session</a>
                     </li>
                     <li class="nav-item">
                         <a href="{{route('session.create')}}" class="nav-link {{($route=='session.create')?'menu-active':''}}"><i class="fas fa-angle-right"></i>Add New Session</a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="{{route('author.index')}}" class="nav-link {{($route=='author.index')?'menu-active':''}}"><i class="fas fa-angle-right"></i>All author</a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="{{route('author.create')}}" class="nav-link {{($route=='author.create')?'menu-active':''}}"><i class="fas fa-angle-right"></i>Add New author</a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="{{route('publication.index')}}" class="nav-link {{($route=='publication.index')?'menu-active':''}}"><i class="fas fa-angle-right"></i>All Publication</a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="{{route('publication.create')}}" class="nav-link {{($route=='publication.create')?'menu-active':''}}"><i class="fas fa-angle-right"></i>Add New Publication</a>
                     </li>
                 </ul>
             </li>
@@ -81,28 +78,6 @@
                     </li>
                     <li class="nav-item">
                         <a href="#" class="nav-link"><i class="fas fa-angle-right {{($route=='student.index')?'menu-active':''}}"></i>Student Promotion</a>
-                    </li>
-                </ul>
-            </li>
-            <li class="nav-item sidebar-nav-item">
-                <a href="#" class="nav-link"><i class="flaticon-maths-class-materials-cross-of-a-pencil-and-a-ruler"></i><span>Author</span></a>
-                <ul class="nav sub-group-menu {{($prefix=='/author')?'sub-group-active':''}}">
-                    <li class="nav-item">
-                        <a href="{{route('author.index')}}" class="nav-link {{($route=='author.index')?'menu-active':''}}"><i class="fas fa-angle-right"></i>All author</a>
-                    </li>
-                    <li class="nav-item">
-                        <a href="{{route('author.create')}}" class="nav-link {{($route=='author.create')?'menu-active':''}}"><i class="fas fa-angle-right"></i>Add New author</a>
-                    </li>
-                </ul>
-            </li>
-            <li class="nav-item sidebar-nav-item">
-                <a href="#" class="nav-link"><i class="flaticon-open-book"></i><span>Publication</span></a>
-                <ul class="nav sub-group-menu {{($prefix=='/publication')?'sub-group-active':''}}">
-                    <li class="nav-item">
-                        <a href="{{route('publication.index')}}" class="nav-link {{($route=='publication.index')?'menu-active':''}}"><i class="fas fa-angle-right"></i>All Publication</a>
-                    </li>
-                    <li class="nav-item">
-                        <a href="{{route('publication.create')}}" class="nav-link {{($route=='publication.create')?'menu-active':''}}"><i class="fas fa-angle-right"></i>Add New Publication</a>
                     </li>
                 </ul>
             </li>
@@ -122,7 +97,8 @@
                         <a href="{{route('purchase.index')}}" class="nav-link {{($route=='purchase.index')?'menu-active':''}}"><i class="fas fa-angle-right"></i>All Purchase List</a>
                     </li>
                     <li class="nav-item">
-                        <a href="{{route('book.distribution')}}" class="nav-link {{($route=='book.distribution')?'menu-active':''}}"><i class="fas fa-angle-right"></i>Book Distribution</a>
+                        <a href="{{route('distribution.create')}}" class="nav-link {{($route=='distribution.create')?'menu-active':''}}"><i class="fas fa-angle-right"></i>Book Distribution</a>
+                        <a href="{{route('distribution.index')}}" class="nav-link {{($route=='distribution.index')?'menu-active':''}}"><i class="fas fa-angle-right"></i>View & Return</a>
                     </li>
                 </ul>
             </li>

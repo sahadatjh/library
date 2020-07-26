@@ -24,7 +24,10 @@
                 <div class="col-6">
                     <div class="item-content">
                         <div class="item-title">Students</div>
-                        <div class="item-number"><span class="counter" data-num="150000">1,50,000</span></div>
+                        @php
+                            $students = DB::table('students')->count();
+                        @endphp
+                        <div class="item-number"><span class="counter" data-num="{{$students}}">{{$students}}</span></div>
                     </div>
                 </div>
             </div>

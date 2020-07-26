@@ -47,7 +47,7 @@
                     </div>
                     <div class="admin-img">
                         @if (Auth::user()->image)
-                            <img src="{{asset(Auth::user()->image)}}" alt="Admin" style="height: 45px; width: 45px;">
+                            <img src="{{asset(Auth::user()->image)}}" alt="Admin" style="height: 35px; width: 35px;">
                         @else
                             <img src="{{asset('public/assets/backend')}}/img/figure/admin.jpg" alt="Admin">
                         @endif
@@ -70,7 +70,6 @@
                                         <i class="flaticon-turn-off"></i>
                                     {{ __('Logout') }}
                                 </a>
-
                                 <form id="logout-form" action="{{ route('logout') }}" method="POST" style="display: none;">
                                     @csrf
                                 </form>

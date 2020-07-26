@@ -54,7 +54,6 @@ class StudentController extends Controller
 	        'mname' => 'required|string|max:200',
 	        'college_roll' => 'required|numeric|unique:students',
 	        'phone' => 'required|numeric',
-	        'email' => 'unique:students',
 	        'religion' => 'required',
 	        'gender' => 'required|max:10',
 	        'department_id' => 'required',
@@ -232,4 +231,5 @@ class StudentController extends Controller
             return redirect()->route('student.index')->with('success','data deleted successfully!!!');
         }
     }
+   
 }

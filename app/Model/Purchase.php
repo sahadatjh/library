@@ -5,6 +5,7 @@ namespace App\Model;
 use Illuminate\Database\Eloquent\Model;
 use App\Model\Book;
 use App\Model\Publication;
+use App\Model\Author;
 use App\Model\User;
 
 class Purchase extends Model
@@ -23,5 +24,7 @@ class Purchase extends Model
     public function updatedUser(){
         return $this->belongsTo(User::class,'updated_by','id');
     }
-
+    public function authorName(){
+        return $this->belongsTo(Author::class,'author_id','id');
+    }
 }

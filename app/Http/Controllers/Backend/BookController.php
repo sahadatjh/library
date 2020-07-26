@@ -170,8 +170,4 @@ class BookController extends Controller
         }
     }
 
-    public function distribution(){
-        $student=Student::find(2);
-        return view('backend.book.distribution',['student'=>$student]);
-    }
 }
